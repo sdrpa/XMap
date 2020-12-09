@@ -5,20 +5,20 @@ XMap displays X-Plane live aircraft position on your iPad using Google maps.
 
 ![Screenshot](Screenshot.jpeg)
 
-### Create GoogleMaps API Key
+### 1. Create GoogleMaps API Key
 [Getting an API Key](https://developers.google.com/maps/documentation/ios-sdk/get-api-key)
 
 Don't forget to visit [Dashboard](https://console.cloud.google.com/apis/dashboard?project=xmap-298021&supportedpurview=project) and enable GoogleMaps API
 
 Restrict your API key to iOS apps and GoogleMapsAPI
 
-### Download GoogleMaps iOS SDK
+### 2. Download GoogleMaps iOS SDK
 
 Download the latest GoogleMaps iOS SDK and unpack the archive to the root directory of the project
 
 ![Project directory structure](Screenshot2.png)
 
-### Create file named SDKConstants.swift with the contents below:
+### 3. Create file named SDKConstants.swift with the contents below:
 ```
 import Foundation
 
@@ -28,7 +28,7 @@ struct SDKConstants {
 ```
 Save it to ```XMap/SDKConstants.swift```
 
-### Configure X-Plane to share GPS data via UDP
+### 4. Configure X-Plane to share GPS data via UDP
 
 Launch the XMap app and observe IP address and port number eg. 192.168.0.43:49003 on the main screen.
 Run X-Plane go to Settings -> Data Output, check rows 19 and 20 under Network via UDP column.
