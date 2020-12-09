@@ -14,7 +14,6 @@
 		B1BC681C25802798003624DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1BC681B25802798003624DF /* Assets.xcassets */; };
 		B1BC681F25802798003624DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1BC681D25802798003624DF /* LaunchScreen.storyboard */; };
 		B1BC682A25802798003624DF /* XMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BC682925802798003624DF /* XMapTests.swift */; };
-		B1BC683525802798003624DF /* XMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BC683425802798003624DF /* XMapUITests.swift */; };
 		B1BC68462580280E003624DF /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BC68452580280E003624DF /* GoogleMapsBase.framework */; };
 		B1BC684C2580283D003624DF /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BC684A2580283D003624DF /* GoogleMaps.framework */; };
 		B1BC684D2580283D003624DF /* GoogleMapsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BC684B2580283D003624DF /* GoogleMapsCore.framework */; };
@@ -35,17 +34,11 @@
 		B1BC687325802946003624DF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BC686425802945003624DF /* QuartzCore.framework */; };
 		B1BC687425802946003624DF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BC686525802946003624DF /* CoreGraphics.framework */; };
 		B1BC688625803513003624DF /* SDKConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BC688525803513003624DF /* SDKConstants.swift */; };
+		B1BC68A62580FAEC003624DF /* ViewController+UDP.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BC68A52580FAEC003624DF /* ViewController+UDP.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		B1BC682625802798003624DF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B1BC680725802794003624DF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B1BC680E25802794003624DF;
-			remoteInfo = XMap;
-		};
-		B1BC683125802798003624DF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B1BC680725802794003624DF /* Project object */;
 			proxyType = 1;
@@ -66,9 +59,6 @@
 		B1BC682525802798003624DF /* XMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1BC682925802798003624DF /* XMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMapTests.swift; sourceTree = "<group>"; };
 		B1BC682B25802798003624DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B1BC683025802798003624DF /* XMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1BC683425802798003624DF /* XMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMapUITests.swift; sourceTree = "<group>"; };
-		B1BC683625802798003624DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1BC68452580280E003624DF /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = "GoogleMaps-4.0.0/Base/Frameworks/GoogleMapsBase.framework"; sourceTree = "<group>"; };
 		B1BC684A2580283D003624DF /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = "GoogleMaps-4.0.0/Maps/Frameworks/GoogleMaps.framework"; sourceTree = "<group>"; };
 		B1BC684B2580283D003624DF /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = "GoogleMaps-4.0.0/Maps/Frameworks/GoogleMapsCore.framework"; sourceTree = "<group>"; };
@@ -89,6 +79,7 @@
 		B1BC686425802945003624DF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B1BC686525802946003624DF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B1BC688525803513003624DF /* SDKConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKConstants.swift; sourceTree = "<group>"; };
+		B1BC68A52580FAEC003624DF /* ViewController+UDP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+UDP.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,13 +115,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B1BC682D25802798003624DF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -142,7 +126,6 @@
 				B1BC684B2580283D003624DF /* GoogleMapsCore.framework */,
 				B1BC681125802794003624DF /* XMap */,
 				B1BC682825802798003624DF /* XMapTests */,
-				B1BC683325802798003624DF /* XMapUITests */,
 				B1BC681025802794003624DF /* Products */,
 				B1BC685625802945003624DF /* Frameworks */,
 			);
@@ -153,7 +136,6 @@
 			children = (
 				B1BC680F25802794003624DF /* XMap.app */,
 				B1BC682525802798003624DF /* XMapTests.xctest */,
-				B1BC683025802798003624DF /* XMapUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,6 +147,7 @@
 				B1BC681225802794003624DF /* AppDelegate.swift */,
 				B1BC681425802794003624DF /* SceneDelegate.swift */,
 				B1BC681625802794003624DF /* ViewController.swift */,
+				B1BC68A52580FAEC003624DF /* ViewController+UDP.swift */,
 				B1BC681825802795003624DF /* Main.storyboard */,
 				B1BC681B25802798003624DF /* Assets.xcassets */,
 				B1BC681D25802798003624DF /* LaunchScreen.storyboard */,
@@ -181,15 +164,6 @@
 				B1BC682B25802798003624DF /* Info.plist */,
 			);
 			path = XMapTests;
-			sourceTree = "<group>";
-		};
-		B1BC683325802798003624DF /* XMapUITests */ = {
-			isa = PBXGroup;
-			children = (
-				B1BC683425802798003624DF /* XMapUITests.swift */,
-				B1BC683625802798003624DF /* Info.plist */,
-			);
-			path = XMapUITests;
 			sourceTree = "<group>";
 		};
 		B1BC685625802945003624DF /* Frameworks */ = {
@@ -252,24 +226,6 @@
 			productReference = B1BC682525802798003624DF /* XMapTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B1BC682F25802798003624DF /* XMapUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B1BC683F25802798003624DF /* Build configuration list for PBXNativeTarget "XMapUITests" */;
-			buildPhases = (
-				B1BC682C25802798003624DF /* Sources */,
-				B1BC682D25802798003624DF /* Frameworks */,
-				B1BC682E25802798003624DF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B1BC683225802798003624DF /* PBXTargetDependency */,
-			);
-			name = XMapUITests;
-			productName = XMapUITests;
-			productReference = B1BC683025802798003624DF /* XMapUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -283,10 +239,6 @@
 						CreatedOnToolsVersion = 12.2;
 					};
 					B1BC682425802798003624DF = {
-						CreatedOnToolsVersion = 12.2;
-						TestTargetID = B1BC680E25802794003624DF;
-					};
-					B1BC682F25802798003624DF = {
 						CreatedOnToolsVersion = 12.2;
 						TestTargetID = B1BC680E25802794003624DF;
 					};
@@ -307,7 +259,6 @@
 			targets = (
 				B1BC680E25802794003624DF /* XMap */,
 				B1BC682425802798003624DF /* XMapTests */,
-				B1BC682F25802798003624DF /* XMapUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -331,13 +282,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B1BC682E25802798003624DF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -347,6 +291,7 @@
 			files = (
 				B1BC688625803513003624DF /* SDKConstants.swift in Sources */,
 				B1BC681725802794003624DF /* ViewController.swift in Sources */,
+				B1BC68A62580FAEC003624DF /* ViewController+UDP.swift in Sources */,
 				B1BC681325802794003624DF /* AppDelegate.swift in Sources */,
 				B1BC681525802794003624DF /* SceneDelegate.swift in Sources */,
 			);
@@ -360,14 +305,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B1BC682C25802798003624DF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B1BC683525802798003624DF /* XMapUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -375,11 +312,6 @@
 			isa = PBXTargetDependency;
 			target = B1BC680E25802794003624DF /* XMap */;
 			targetProxy = B1BC682625802798003624DF /* PBXContainerItemProxy */;
-		};
-		B1BC683225802798003624DF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B1BC680E25802794003624DF /* XMap */;
-			targetProxy = B1BC683125802798003624DF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -613,46 +545,6 @@
 			};
 			name = Release;
 		};
-		B1BC684025802798003624DF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WN8B3R544B;
-				INFOPLIST_FILE = XMapUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tagtaxa.XMapUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = XMap;
-			};
-			name = Debug;
-		};
-		B1BC684125802798003624DF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WN8B3R544B;
-				INFOPLIST_FILE = XMapUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tagtaxa.XMapUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = XMap;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -679,15 +571,6 @@
 			buildConfigurations = (
 				B1BC683D25802798003624DF /* Debug */,
 				B1BC683E25802798003624DF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B1BC683F25802798003624DF /* Build configuration list for PBXNativeTarget "XMapUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B1BC684025802798003624DF /* Debug */,
-				B1BC684125802798003624DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
