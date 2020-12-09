@@ -34,3 +34,7 @@ Tested on X-Plane 11.5
 https://developers.google.com/maps/documentation/ios-sdk/start#install-manually   
 https://developers.google.com/maps/billing/gmp-billing?hl=en_US#maps-product   
 https://console.cloud.google.com/google/maps-apis/metrics?project=xmap-298021&folder=&organizationId=&supportedpurview=project   
+
+### License
+
+[MIT](https://github.com/git/git-scm.com/blob/master/MIT-LICENSE.txt)
