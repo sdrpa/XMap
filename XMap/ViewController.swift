@@ -1,6 +1,4 @@
-// https://developers.google.com/maps/documentation/ios-sdk/start#install-manually
-// https://developers.google.com/maps/billing/gmp-billing?hl=en_US#maps-product
-// https://console.cloud.google.com/google/maps-apis/metrics?project=xmap-298021&folder=&organizationId=&supportedpurview=project
+
 import GoogleMaps
 import Network
 import UIKit
@@ -15,8 +13,8 @@ class ViewController: UIViewController {
    
    let marker = GMSMarker()
    
-   var tracking = true
-   var isIdle = true
+   var tracking = true  /// Tracks whether GPS tacking is enabled
+   var isMapIdle = true /// Tracks whether a natural gesture (such as a pan or tilt) on the GMSMapView is in progress. We need it to pause GPS tracking while a user performing the gesture.
    
    override var prefersStatusBarHidden: Bool {
       return true
@@ -28,9 +26,8 @@ class ViewController: UIViewController {
          deviceAddressLabel.text = "\(deviceAddress):\(udpPort)"
       }
       
+      // Create a default camera and a marker in the center of the map
       mapView.camera = GMSCameraPosition.camera(withLatitude: Belgrade.lat, longitude: Belgrade.lng, zoom: 13.0)
-      
-      // Creates a marker in the center of the map.
       
       let airplane = UIImage(systemName: "airplane")
       let markerView = UIImageView(image: airplane)
@@ -51,7 +48,7 @@ class ViewController: UIViewController {
       startListening()
    }
    
-   func didReceiveUpdateForDataset(_ index: Int, values: [Float32]) {
+   func updateDisplayWithDataset(_ index: Int, values: [Float32]) {
       switch index {
       case 19: // 19 : [85.02289, -4.919937, -999.0, -999.0, -999.0, -999.0, -999.0, -999.0]
          let degrees = CLLocationDegrees(values[0])
@@ -62,7 +59,7 @@ class ViewController: UIViewController {
          let lng = CLLocationDegrees(values[1])
          marker.position = CLLocationCoordinate2D(latitude: lat, longitude: lng)
          
-         if tracking && isIdle {
+         if tracking && isMapIdle {
             let cameraUpdate = GMSCameraUpdate.setTarget(marker.position)
             mapView.animate(with: cameraUpdate)
          }
@@ -74,15 +71,16 @@ class ViewController: UIViewController {
 
 extension ViewController: GMSMapViewDelegate {
    func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
-      isIdle = false
+      isMapIdle = false
+      // Note: If the gesture argument is set to true, this is due to a user performing a natural gesture on the GMSMapView, such as a pan or tilt. Otherwise, false indicates that this is part of a programmatic change.
    }
    
    func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
-      isIdle = true
+      isMapIdle = true
    }
 }
 
-// MARK: -
+// MARK: - Default center for the map
 
 fileprivate struct Belgrade {
    static let lat = 44.7866

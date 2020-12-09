@@ -86,7 +86,7 @@ extension ViewController {
          // 19 : [85.02289, -4.919937, -999.0, -999.0, -999.0, -999.0, -999.0, -999.0]
          // 20 : [44.825912, 20.293478, 339.2952, 0.254495, 0.0, 339.295, 44.5, 20.0]
          DispatchQueue.main.async { [weak self] in
-            self?.didReceiveUpdateForDataset(Int(row), values: values)
+            self?.updateDisplayWithDataset(Int(row), values: values)
          }
       }
    }
