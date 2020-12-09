@@ -1,6 +1,6 @@
-# X-Plane Live GoogleMaps GPS Tracker
+# X-Plane Personal GoogleMaps GPS Tracker for iPad
 
-iPad X-Plane flight tracker to enhance the experience of Bush flying. 
+XMap is X-Plane flight tracker app enhancing the experience of Bush flying. 
 XMap displays X-Plane live aircraft position on your iPad using Google maps.
 
 ![Screenshot](Screenshot.jpeg)
