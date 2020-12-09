@@ -35,6 +35,7 @@
 		B1BC687425802946003624DF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BC686525802946003624DF /* CoreGraphics.framework */; };
 		B1BC688625803513003624DF /* SDKConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BC688525803513003624DF /* SDKConstants.swift */; };
 		B1BC68A62580FAEC003624DF /* ViewController+UDP.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BC68A52580FAEC003624DF /* ViewController+UDP.swift */; };
+		B1BC68B125812F77003624DF /* ViewController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BC68B025812F77003624DF /* ViewController+Actions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		B1BC686525802946003624DF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B1BC688525803513003624DF /* SDKConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKConstants.swift; sourceTree = "<group>"; };
 		B1BC68A52580FAEC003624DF /* ViewController+UDP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+UDP.swift"; sourceTree = "<group>"; };
+		B1BC68B025812F77003624DF /* ViewController+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Actions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				B1BC681225802794003624DF /* AppDelegate.swift */,
 				B1BC681425802794003624DF /* SceneDelegate.swift */,
 				B1BC681625802794003624DF /* ViewController.swift */,
+				B1BC68B025812F77003624DF /* ViewController+Actions.swift */,
 				B1BC68A52580FAEC003624DF /* ViewController+UDP.swift */,
 				B1BC681825802795003624DF /* Main.storyboard */,
 				B1BC681B25802798003624DF /* Assets.xcassets */,
@@ -293,6 +296,7 @@
 				B1BC681725802794003624DF /* ViewController.swift in Sources */,
 				B1BC68A62580FAEC003624DF /* ViewController+UDP.swift in Sources */,
 				B1BC681325802794003624DF /* AppDelegate.swift in Sources */,
+				B1BC68B125812F77003624DF /* ViewController+Actions.swift in Sources */,
 				B1BC681525802794003624DF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

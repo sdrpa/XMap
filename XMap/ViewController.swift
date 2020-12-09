@@ -5,13 +5,16 @@ import GoogleMaps
 import Network
 import UIKit
 
-class ViewController: UIViewController, GMSMapViewDelegate {
-   @IBOutlet private weak var mapView: GMSMapView!
+class ViewController: UIViewController {
+   @IBOutlet weak var mapView: GMSMapView!
    
    var listener: NWListener?
    var connection: NWConnection?
    
-   private let marker = GMSMarker()
+   let marker = GMSMarker()
+   
+   var tracking = true
+   var isIdle = true
    
    override var prefersStatusBarHidden: Bool {
       return true
@@ -53,9 +56,24 @@ class ViewController: UIViewController, GMSMapViewDelegate {
          let lat = CLLocationDegrees(values[0])
          let lng = CLLocationDegrees(values[1])
          marker.position = CLLocationCoordinate2D(latitude: lat, longitude: lng)
+         
+         if tracking && isIdle {
+            let cameraUpdate = GMSCameraUpdate.setTarget(marker.position)
+            mapView.animate(with: cameraUpdate)
+         }
       default:
          print("Not implemented")
       }
+   }
+}
+
+extension ViewController: GMSMapViewDelegate {
+   func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
+      isIdle = false
+   }
+   
+   func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
+      isIdle = true
    }
 }
 
