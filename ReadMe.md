@@ -28,7 +28,7 @@ struct SDKConstants {
 ```
 Save it to ```XMap/SDKConstants.swift```
 
-### Configure X-Plane to share UDP data
+### Configure X-Plane to share GPS data via UDP
 
 Launch the XMap app and observe IP address and port number eg. 192.168.0.43:49003 on the main screen.
 Run X-Plane go to Settings -> Data Output, check rows 19 and 20 under Network via UDP column.
