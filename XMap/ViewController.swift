@@ -10,6 +10,7 @@ class ViewController: UIViewController {
    @IBOutlet weak var deviceAddressLabel: UILabel!
    
    var listener: NWListener?
+   let udpPort: NWEndpoint.Port = 49003
    var connection: NWConnection?
    
    let marker = GMSMarker()
@@ -23,7 +24,9 @@ class ViewController: UIViewController {
    
    override func viewDidLoad() {
       super.viewDidLoad()
-      deviceAddressLabel.text = getIPAddress()
+      if let deviceAddress = getIPAddress() {
+         deviceAddressLabel.text = "\(deviceAddress):\(udpPort)"
+      }
       
       mapView.camera = GMSCameraPosition.camera(withLatitude: Belgrade.lat, longitude: Belgrade.lng, zoom: 13.0)
       

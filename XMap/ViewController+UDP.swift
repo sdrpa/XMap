@@ -4,7 +4,7 @@ import Network
 
 extension ViewController {
    func startListening() {
-      listener = try? NWListener(using: .udp, on: 49003)
+      listener = try? NWListener(using: .udp, on: udpPort)
       //listener?.service = NWListener.Service.init(type: "_appname._udp")
       
       self.listener?.stateUpdateHandler = { update in
