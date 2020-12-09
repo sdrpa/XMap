@@ -12,6 +12,12 @@ Don't forget to visit [Dashboard](https://console.cloud.google.com/apis/dashboar
 
 Restrict your API key to iOS apps and GoogleMapsAPI
 
+### Download GoogleMaps iOS SDK
+
+Download the latest GoogleMaps iOS SDK and unpack the archive to the root directory of the project
+
+![Project directory structure](Screenshot2.png)
+
 ### Create file named SDKConstants.swift with the contents below:
 ```
 import Foundation
@@ -20,6 +26,7 @@ struct SDKConstants {
    static let APIKey = "<YOUR_GOOGLE_MAPS_API_KEY>"
 }
 ```
+Save it to ```XMap/SDKConstants.swift```
 
 ### Configure X-Plane to share UDP data
 
