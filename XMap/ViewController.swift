@@ -7,6 +7,7 @@ import UIKit
 
 class ViewController: UIViewController {
    @IBOutlet weak var mapView: GMSMapView!
+   @IBOutlet weak var deviceAddressLabel: UILabel!
    
    var listener: NWListener?
    var connection: NWConnection?
@@ -22,6 +23,7 @@ class ViewController: UIViewController {
    
    override func viewDidLoad() {
       super.viewDidLoad()
+      deviceAddressLabel.text = getIPAddress()
       
       mapView.camera = GMSCameraPosition.camera(withLatitude: Belgrade.lat, longitude: Belgrade.lng, zoom: 13.0)
       
