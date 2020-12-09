@@ -8,7 +8,7 @@ XMap displays X-Plane live aircraft position on your iPad using Google maps.
 ### 1. Create GoogleMaps API Key
 [Getting an API Key](https://developers.google.com/maps/documentation/ios-sdk/get-api-key)
 
-Don't forget to visit [Dashboard](https://console.cloud.google.com/apis/dashboard?project=xmap-298021&supportedpurview=project) and enable GoogleMaps API
+Don't forget to visit [Dashboard](https://console.cloud.google.com/apis/dashboard) and enable GoogleMaps API
 
 Restrict your API key to iOS apps and GoogleMapsAPI
 
@@ -39,8 +39,7 @@ Tested on X-Plane 11.5
 ### Other Resources
 
 https://developers.google.com/maps/documentation/ios-sdk/start#install-manually   
-https://developers.google.com/maps/billing/gmp-billing?hl=en_US#maps-product   
-https://console.cloud.google.com/google/maps-apis/metrics?project=xmap-298021&folder=&organizationId=&supportedpurview=project   
+  
 
 ### License
 
