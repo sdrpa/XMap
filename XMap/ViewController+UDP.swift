@@ -23,8 +23,9 @@ extension ViewController {
    }
    
    func stopListening() {
-      listener?.cancel()
       connection?.cancel()
+      listener?.cancel()
+      listener = nil
    }
    
    func createConnection(connection: NWConnection) {

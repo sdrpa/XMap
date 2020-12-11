@@ -49,18 +49,43 @@
                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPS (00.0, 00.0)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YtY-54-Clj">
+                                        <rect key="frame" x="648" y="12.5" width="94" height="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HDG 000°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nM3-Cz-Bfd">
+                                        <rect key="frame" x="581.5" y="12.5" width="58.5" height="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUI-Zu-bwW">
+                                        <rect key="frame" x="355" y="9" width="20" height="22"/>
+                                        <state key="normal" image="stop.circle" catalog="system"/>
+                                        <connections>
+                                            <action selector="handleListening:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KRQ-rW-BQN"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="8aa-MG-MfV" firstAttribute="centerX" secondItem="Ok4-Bd-gs3" secondAttribute="centerX" id="E3A-og-IXa"/>
+                                    <constraint firstItem="nM3-Cz-Bfd" firstAttribute="centerY" secondItem="8aa-MG-MfV" secondAttribute="centerY" id="LGO-AL-lff"/>
                                     <constraint firstItem="61n-pw-P7I" firstAttribute="leading" secondItem="Ok4-Bd-gs3" secondAttribute="leading" constant="20" id="Lsh-vc-Meg"/>
+                                    <constraint firstItem="nUI-Zu-bwW" firstAttribute="centerY" secondItem="r34-QQ-L9W" secondAttribute="centerY" id="QF9-1d-L38"/>
                                     <constraint firstAttribute="trailing" secondItem="nnr-Ir-CUx" secondAttribute="trailing" constant="20" id="Rkq-HP-zX1"/>
                                     <constraint firstItem="r34-QQ-L9W" firstAttribute="leading" secondItem="61n-pw-P7I" secondAttribute="trailing" constant="8" id="T3g-1X-wf3"/>
+                                    <constraint firstItem="YtY-54-Clj" firstAttribute="leading" secondItem="nM3-Cz-Bfd" secondAttribute="trailing" constant="8" symbolic="YES" id="WZC-zt-KQk"/>
                                     <constraint firstItem="nnr-Ir-CUx" firstAttribute="centerY" secondItem="r34-QQ-L9W" secondAttribute="centerY" id="a0k-0w-XK7"/>
                                     <constraint firstItem="8aa-MG-MfV" firstAttribute="centerY" secondItem="Ok4-Bd-gs3" secondAttribute="centerY" id="bYk-b1-emv"/>
                                     <constraint firstAttribute="height" constant="40" id="cdf-EB-ARQ"/>
+                                    <constraint firstItem="8aa-MG-MfV" firstAttribute="leading" secondItem="nUI-Zu-bwW" secondAttribute="trailing" constant="15" id="mT5-ES-wXs"/>
+                                    <constraint firstItem="nnr-Ir-CUx" firstAttribute="leading" secondItem="YtY-54-Clj" secondAttribute="trailing" constant="20" id="uOk-ID-cox"/>
                                     <constraint firstItem="r34-QQ-L9W" firstAttribute="centerY" secondItem="Ok4-Bd-gs3" secondAttribute="centerY" id="udD-nO-2bO"/>
                                     <constraint firstItem="r34-QQ-L9W" firstAttribute="centerY" secondItem="61n-pw-P7I" secondAttribute="centerY" id="vMO-Av-0JS"/>
+                                    <constraint firstItem="YtY-54-Clj" firstAttribute="centerY" secondItem="8aa-MG-MfV" secondAttribute="centerY" id="wz7-Ku-GdA"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -77,7 +102,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="debugGPSLabel" destination="YtY-54-Clj" id="cNO-iX-dyS"/>
+                        <outlet property="debugHeadingLabel" destination="nM3-Cz-Bfd" id="r8N-yh-UbY"/>
                         <outlet property="deviceAddressLabel" destination="8aa-MG-MfV" id="Km9-4H-7kl"/>
+                        <outlet property="listeningButton" destination="nUI-Zu-bwW" id="gOq-gL-PcF"/>
                         <outlet property="mapView" destination="G0I-p3-DJ1" id="qTR-A6-FlF"/>
                     </connections>
                 </viewController>
@@ -87,6 +115,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="stop.circle" catalog="system" width="128" height="121"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

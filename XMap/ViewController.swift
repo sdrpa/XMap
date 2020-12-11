@@ -6,8 +6,17 @@ import UIKit
 class ViewController: UIViewController {
    @IBOutlet weak var mapView: GMSMapView!
    @IBOutlet weak var deviceAddressLabel: UILabel!
+   @IBOutlet weak var listeningButton: UIButton!
+   @IBOutlet weak var debugHeadingLabel: UILabel!
+   @IBOutlet weak var debugGPSLabel: UILabel!
    
-   var listener: NWListener?
+   var listener: NWListener? {
+      didSet {
+         let playImage = UIImage(systemName: "play.circle")
+         let stopImage = UIImage(systemName: "stop.circle")
+         listeningButton.setImage(listener == nil ? playImage : stopImage, for: .normal)
+      }
+   }
    let udpPort: NWEndpoint.Port = 49003
    var connection: NWConnection?
    
@@ -53,11 +62,13 @@ class ViewController: UIViewController {
       case 19: // 19 : [85.02289, -4.919937, -999.0, -999.0, -999.0, -999.0, -999.0, -999.0]
          let degrees = CLLocationDegrees(values[0])
          marker.rotation = degrees - 90 // -90 since airplane SF Icon is initialy rotated by 45 degrees
+         debugHeadingLabel.text = String(format: "HDG %.0f", degrees);
          
       case 20: // 20 : [44.825912, 20.293478, 339.2952, 0.254495, 0.0, 339.295, 44.5, 20.0]
          let lat = CLLocationDegrees(values[0])
          let lng = CLLocationDegrees(values[1])
          marker.position = CLLocationCoordinate2D(latitude: lat, longitude: lng)
+         debugGPSLabel.text = String(format: "GPS (%.1f, %.1f)", lat, lng);
          
          if tracking && isMapIdle {
             let cameraUpdate = GMSCameraUpdate.setTarget(marker.position)
