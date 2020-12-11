@@ -1,7 +1,7 @@
-# X-Plane Personal GoogleMaps GPS Tracker for iPad
+# X-Plane and MSFS 2020 Personal GoogleMaps GPS Tracker for iPad
 
-XMap is X-Plane flight tracker app enhancing the experience of Bush flying. 
-XMap displays X-Plane live aircraft position on your iPad using Google maps.
+XMap is X-Plane and MSFS 2020 flight tracker app enhancing the experience of Bush flying. 
+XMap displays live aircraft position on your iPad using Google maps.
 
 ![Screenshot](Screenshot.jpeg)
 
@@ -28,6 +28,8 @@ struct SDKConstants {
 ```
 Save it to ```XMap/SDKConstants.swift```
 
+## X-Plane
+
 ### 4. Configure X-Plane to share GPS data via UDP
 
 Launch the XMap app and observe IP address and port number eg. 192.168.0.43:49003 on the main screen.
@@ -35,6 +37,10 @@ Run X-Plane go to Settings -> Data Output, check rows 19 and 20 under Network vi
 Check Send network data output and enter iPad IP address and port eg. 192.168.0.43 port 4903.
 
 Tested on X-Plane 11.5
+
+## MSFS 2020
+
+### 4. Use [SimConnect-UDP](https://github.com/sdrpa/SimConnect-UDP) to broadcast MSFS 2020 data via UDP
 
 ### Other Resources
 
